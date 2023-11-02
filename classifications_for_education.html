@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Page</title>
+    <style>
+        /* Add some basic styling */
+        .classification-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .classification-list {
+            width: 50%;
+        }
+
+        .details {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .detail-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .classification-button {
+            display: block;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .classification-button.selected {
+            background-color: #ada7eb;
+        }
+
+        button.explore-btn {
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Tab styling */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Added styles for the detail columns */
+        .detail-columns {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* Additional styling for the tab section */
+        .details {
+            border: 1px solid #000;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #classification-title {
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .tab {
+            padding: 10px 15px;
+            border: none;
+            background-color: #f5f5f5;
+            transition: background-color 0.3s;
+        }
+
+        .tab.active {
+            background-color: #ada7eb;
+            color: #fff;
+        }
+
+        .classification-container {
+            display: flex;     /* This makes it a flex container */
+            flex-direction: column; /* Elements inside will stack vertically */
+        }
+        
+        /* New style for the wrapping div */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="classification-container">
+        <div class="content-container">
+            <div class="classification-list">
+                <button class="classification-button" data-jobs="4000" data-departments="88" data-education="High school">AS - Administrative Services</button>
+                <button class="classification-button" data-jobs="..." data-departments="..." data-education="...">CO - Commerce</button>
+                <button class="classification-button" data-jobs="..." data-departments="..." data-education="...">EC - Economics and Social Science Services</button>
+                <button class="classification-button" data-jobs="..." data-departments="..." data-education="...">FI - Financial Management</button>
+                <button class="classification-button" data-jobs="..." data-departments="..." data-education="...">PG - Purchasing and Supply</button>
+                <button class="classification-button" data-jobs="..." data-departments="..." data-education="...">PM - Programme Administration</button>
+                <button class="classification-button" data-jobs="..." data-departments="..." data-education="...">CR - Clerical and Regulatory</button>
+                <div>View all other classifications</div>
+            </div>
+
+            <div class="detail-columns">
+                <div class="detail-item">Amount of jobs: <span id="jobs">4000</span></div>
+                <div class="detail-item">Amount of departments with this classification: <span id="departments">88</span></div>
+                <div class="detail-item">Minimum education level: <span id="education">High school</span></div>
+            </div>
+            
+            <div class="details">
+                <h2 id="classification-title">AS - Administrative Services</h2>
+                <div class="tabs">
+                    <div class="tab" data-tab="definition">Definition</div>
+                    <div class="tab" data-tab="evaluation">Job Evaluation Standard</div>
+                </div>
+                <div class="tab-content active" id="definition">
+                    Definition content here...
+                </div>
+                <div class="tab-content" id="evaluation">
+                    Job Evaluation Standard content here...
+                </div>
+            </div>
+            
+        </div>
+
+        <button class="explore-btn">Continue exploring this classification</button>
+    </div>
+
+    <script>
+        // JavaScript to handle the click event and update the details
+        const classifications = document.querySelectorAll('.classification-button');
+        classifications.forEach(classification => {
+            classification.addEventListener('click', function() {
+                // Reset the selected class for all buttons
+                classifications.forEach(btn => {
+                    btn.classList.remove('selected');
+                });
+
+                // Highlight the clicked button
+                this.classList.add('selected');
+
+                const jobs = this.getAttribute('data-jobs');
+                const departments = this.getAttribute('data-departments');
+                const education = this.getAttribute('data-education');
+
+                document.getElementById('jobs').textContent = jobs;
+                document.getElementById('departments').textContent = departments;
+                document.getElementById('education').textContent = education;
+            });
+        });
+        // JavaScript to handle the tabs
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const classificationTitle = document.getElementById('classification-title');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const selectedTab = this.getAttribute('data-tab');
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                this.classList.add('active');
+                document.getElementById(selectedTab).classList.add('active');
+            });
+        });
+
+        // Update to handle the title of the selected classification
+        classifications.forEach(classification => {
+            classification.addEventListener('click', function() {
+                // ... Existing Classification Selection Code ...
+
+                // Update the classification title
+                const title = this.textContent;
+                classificationTitle.textContent = title;
+            });
+        });
+        // Additional tab handling
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // ... Existing Tab Selection Code ...
+
+                // De-highlight all tabs and highlight the selected tab
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

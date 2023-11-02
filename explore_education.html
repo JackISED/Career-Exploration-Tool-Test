@@ -52,6 +52,21 @@
             background-color: #007BFF;
             color: white;
         }
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #0056b3;
+        }
+        
     </style>
     <script>
         function toggleSelection(event) {
@@ -88,7 +103,7 @@
             <button onclick="toggleSelection(event)">Electrical</button>
             <button onclick="toggleSelection(event)">Engineering</button>
         </div>
-        <button>Search</button>
+        <a href="classifications_for_education.html" class="button">Search</a>
     </div>
 </body>
 
