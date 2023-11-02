@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Page</title>
+    <style>
+        /* Add some basic styling */
+        .classification-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .classification-list {
+            width: 50%;
+        }
+
+        .details {
+            width: 40%;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="classification-container">
+        <div class="classification-list">
+            <div class="classification" data-jobs="4000" data-departments="88" data-education="High school">AS - Administrative Services</div>
+            <div class="classification" data-jobs="..." data-departments="..." data-education="...">CO - Commerce</div>
+            <div class="classification" data-jobs="..." data-departments="..." data-education="...">EC - Economics and Social Science Services</div>
+            <div class="classification" data-jobs="..." data-departments="..." data-education="...">FI - Financial Management</div>
+            <div class="classification" data-jobs="..." data-departments="..." data-education="...">PG - Purchasing and Supply</div>
+            <div class="classification" data-jobs="..." data-departments="..." data-education="...">PM - Programme Administration</div>
+            <div class="classification" data-jobs="..." data-departments="..." data-education="...">CR - Clerical and Regulatory</div>
+            <div>View all other classifications</div>
+        </div>
+
+        <div class="details">
+            Amount of jobs: <span id="jobs">4000</span><br>
+            Amount of departments with this classification: <span id="departments">88</span><br>
+            Minimum education level: <span id="education">High school</span>
+        </div>
+    </div>
+
+    <button>Continue exploring this classification</button>
+
+    <script>
+        // JavaScript to handle the click event and update the details
+        const classifications = document.querySelectorAll('.classification');
+        classifications.forEach(classification => {
+            classification.addEventListener('click', function() {
+                const jobs = this.getAttribute('data-jobs');
+                const departments = this.getAttribute('data-departments');
+                const education = this.getAttribute('data-education');
+
+                document.getElementById('jobs').textContent = jobs;
+                document.getElementById('departments').textContent = departments;
+                document.getElementById('education').textContent = education;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
