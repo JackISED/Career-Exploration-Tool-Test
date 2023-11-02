@@ -35,18 +35,33 @@
             height: 100px;
             border: 1px solid #d1d1d1;
             overflow: auto;
+            padding: 10px;
         }
         
-        .multiselect label {
-            display: block;
-            padding: 5px;
+        .multiselect button {
+            margin: 5px;
+            padding: 5px 10px;
+            border: none;
+            background-color: #f7f7f7;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         
-        .multiselect input[type="checkbox"] {
-            margin-right: 5px;
+        .multiselect button.selected {
+            background-color: #007BFF;
+            color: white;
         }
     </style>
+    <script>
+        function toggleSelection(event) {
+            const btn = event.target;
+            if (btn.classList.contains("selected")) {
+                btn.classList.remove("selected");
+            } else {
+                btn.classList.add("selected");
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -55,9 +70,9 @@
         <div class="description">Step 1: Select an education program. You can select multiple programs to better represent the subject you are studying</div>
         <label for="education-program">Education program</label>
         <div class="multiselect" id="education-program">
-            <label><input type="checkbox" value="Economics">Economics</label>
-            <label><input type="checkbox" value="Electrical">Electrical</label>
-            <label><input type="checkbox" value="Engineering">Engineering</label>
+            <button onclick="toggleSelection(event)">Economics</button>
+            <button onclick="toggleSelection(event)">Electrical</button>
+            <button onclick="toggleSelection(event)">Engineering</button>
         </div>
         <button>Search</button>
     </div>
