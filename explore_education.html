@@ -45,6 +45,7 @@
             background-color: #f7f7f7;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            display: block;
         }
         
         .multiselect button.selected {
@@ -61,6 +62,18 @@
                 btn.classList.add("selected");
             }
         }
+
+        function filterOptions() {
+            const searchValue = document.getElementById('searchBox').value.toLowerCase();
+            const buttons = document.querySelectorAll('.multiselect button');
+            buttons.forEach(button => {
+                if (!button.innerText.toLowerCase().includes(searchValue) && !button.classList.contains('selected')) {
+                    button.style.display = 'none';
+                } else {
+                    button.style.display = 'block';
+                }
+            });
+        }
     </script>
 </head>
 
@@ -69,6 +82,7 @@
         <div class="header">Search by field of study</div>
         <div class="description">Step 1: Select an education program. You can select multiple programs to better represent the subject you are studying</div>
         <label for="education-program">Education program</label>
+        <input type="text" id="searchBox" onkeyup="filterOptions()" placeholder="Search for programs...">
         <div class="multiselect" id="education-program">
             <button onclick="toggleSelection(event)">Economics</button>
             <button onclick="toggleSelection(event)">Electrical</button>
