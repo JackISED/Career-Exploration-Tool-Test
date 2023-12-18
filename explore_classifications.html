@@ -23,26 +23,13 @@
       Results provide the classifications that align with your education program but more could apply. It's
       important to
       note that experience is also a factor when applying for a
-      position.<br/><br/>Based on your selection, here are the classifications that align best with your education<br/>
+      position.<br/><br/>Based on your selection, here are the classifications that align best with your education. Click on a classification to learn more about it.<br/>
     </p>
   </div>
   <div class="flex-container">
-    <div class="classification-column" id="left column">
-      <div class="classification-list">
-        <div class="classification-collapsable">
-          <button class="classification-header">Electronics (EL)</button>
-          <div class="classification-content">
-            <a href="https://www.canada.ca/en/treasury-board-secretariat/services/collective-agreements/occupational-groups/electronics.html" class="link">Learn more about this classification</a>
-            <a href="#" class="link">Explore jobs</a>
-            <p>Number of jobs in this department: </p>
-            <p>number of departments with this classification: </p>
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="classification-column" id="center column">Column 2</div>
-    <div class="classification-column" id="right column">Column 3</div>
+    <div class="classification-column" id="left-column"></div>
+    <div class="classification-column" id="center-column"></div>
+    <div class="classification-column" id="right-column"></div>
   </div>
     
   </div>
@@ -54,109 +41,148 @@
     
         // List of JSON files
         const jsonFiles = [
-        'JSONs\\AS - Administrative_Services.json',
-        'JSONs\\AU - Auditing.json',
-        'JSONs\\CO - Commerce.json',
-        'JSONs\\CR - Clerical_and_Regulatory.json',
-        'JSONs\\EC - Economics_and_Social_Science_Services.json',
-        'JSONs\\ED - Education.json',
-        'JSONs\\EG - Engineering_and_Scientific_Support.json',
-        'JSONs\\EL - Electronics.json',
-        'JSONs\\EN - Engineering.json',
-        'JSONs\\FI - Financial_Management.json',
-        'JSONs\\GL - General_Labour_and_Trades.json',
-        'JSONs\\GS - General_Service.json',
-        'JSONs\\GT - General_Technician.json',
-        'JSONs\\HP - Heating,_Power_and_Stationary_Plant_Operations.json',
-        'JSONs\\IS - Information_Services.json',
-        'JSONs\\IT - Information_Technology.json',
-        'JSONs\\LC - Law_Management.json',
-        'JSONs\\LP - Law_Practitioner.json',
-        'JSONs\\LS - Library_Science.json',
-        'JSONs\\PC - Physical_Sciences_.json',
-        'JSONs\\PE - Personnel_Administration.json',
-        'JSONs\\PG - Purchasing_and_Supply.json',
-        'JSONs\\PM - Programme_Administration.json',
-        'JSONs\\SE - Scientific_Research.json',
-        'JSONs\\SG - Scientific_Regulation.json',
-        'JSONs\\TI - Technical_Inspection.json'
+        'JSONs/AS - Administrative_Services.json',
+        'JSONs/AU - Auditing.json',
+        'JSONs/CO - Commerce.json',
+        'JSONs/CR - Clerical_and_Regulatory.json',
+        'JSONs/EC - Economics_and_Social_Science_Services.json',
+        'JSONs/ED - Education.json',
+        'JSONs/EG - Engineering_and_Scientific_Support.json',
+        'JSONs/EL - Electronics.json',
+        'JSONs/EN - Engineering.json',
+        'JSONs/FI - Financial_Management.json',
+        'JSONs/GL - General_Labour_and_Trades.json',
+        'JSONs/GS - General_Service.json',
+        'JSONs/GT - General_Technician.json',
+        'JSONs/HP - Heating_Power_and_Stationary_Plant_Operations.json',
+        'JSONs/IS - Information_Services.json',
+        'JSONs/IT - Information_Technology.json',
+        'JSONs/LC - Law_Management.json',
+        'JSONs/LP - Law_Practitioner.json',
+        'JSONs/LS - Library_Science.json',
+        'JSONs/PC - Physical_Sciences_.json',
+        'JSONs/PE - Personnel_Administration.json',
+        'JSONs/PG - Purchasing_and_Supply.json',
+        'JSONs/PM - Programme_Administration.json',
+        'JSONs/SE - Scientific_Research.json',
+        'JSONs/SG - Scientific_Regulation.json',
+        'JSONs/TI - Technical_Inspection.json'
         
         
             // ... Add all other JSON file names here
         ];
-        
-        // make classifications collapsable
-        var coll = document.getElementsByClassName("classification-header");
-        for (var i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                } 
-            });
-        }
+        let columns = ["left column", "center column", "right column"];
+        let education_classification_dict = {};
     
         // Function to check if JSON file contains any of the query parameters
-        // Function to check if JSON file contains any of the query parameters
-        function checkJsonForParams(jsonData, params) {
+        function checkJsonForParams(jsonData, params, classification) {
+          let classFormatted  = classification.split('/')[1];
           // Iterate through each parameter
           for (let param of params) {
-              // Check if the parameter exists in the jsonData array
-              if (jsonData.includes(param)) {
-                  return true; // Match found
+            // if the education paramter exists in the classification JSON
+            if (jsonData.includes(param)) {
+              // if the education has been added as a key to the dictionary
+              if (param in education_classification_dict){
+                console.log("found education " + param + " under the classification " + classFormatted);
+                // add the classification to the value list
+                education_classification_dict[param].push(classFormatted);
+              }else{
+                // else add the education as a key and then the classification into the value list
+                education_classification_dict[param] = [classFormatted];
               }
+            }
           }
-          return false; // No match found
         }
 
     
         // Function to filter buttons
-        function filterButtons() {
+        function create_all_buttons() {
           // Get all buttons inside the classification-list-container
-          const buttons = document.querySelectorAll('#iypqmf .classification-button');
+          //const buttons = document.querySelectorAll('#iypqmf .classification-button');
+          const container_left = document.getElementById('left-column');
+          const container_center = document.getElementById('center-column');
+          const container_right = document.getElementById('right-column');
+          let column_containters = [container_center, container_left, container_right]
 
+          let fetchPromises = [];
+          
+
+          // first use the parameters to generate a dictionary that has the education parameters as keys and a list of related 
+          // classifications as the values
+          console.log("beginning parameter check");
           jsonFiles.forEach(file => {
-              fetch(file)
-                  .then(response => response.json())
-                  .then(jsonData => {
-                      if (checkJsonForParams(jsonData, queryParams)) {
-                          // Find the button corresponding to this JSON file and show it
-                          search_string = file.split(' - ')[0];
-                          //search_string = search_string.split('\\')[1];
-                          //const button = Array.from(buttons).find(btn => btn.textContent.includes(search_string));
-                          //if (button) {
-                          //    console.log("showing button");
-                          //    console.log(button.textContent);
-                          //    button.style.display = 'block';
-                          //}
-                          //else{
-                          //  console.log("did not find button to block");
-                          //}
-                      } else {
-                          // Find the button corresponding to this JSON file and hide it
-                          search_string = file.split(' - ')[0];
-                          //search_string = search_string.split('\\')[1];
-                          //const button = Array.from(buttons).find(btn => btn.textContent.includes(search_string));
-                          //if (button) {
-                          //    console.log("blocking button:");
-                          //    console.log(button.textContent);
+            let fetchPromise = fetch(file)
+                .then(response => response.json())
+                .then(jsonData => {
+                    let classification = file.split('.')[0];
+                    checkJsonForParams(jsonData, queryParams, classification);                      
+                })
+                .catch(error => console.error('Error loading JSON file:', error));
+            
+            fetchPromises.push(fetchPromise);
+          });
 
-                          //    button.style.display = 'none';
-                          //}
-                          //else{
-                           // console.log("did not find button to show");
-                          //}
-                      }
-                  })
-                  .catch(error => console.error('Error loading JSON file:', error));
+
+          console.log("done generating dictionary");
+          console.log(education_classification_dict);
+          Promise.all(fetchPromises).then(() => {
+          // I need the below this line to wait until the JSON processing that happens above is done
+            let column_counter = 0;
+            let total_btn_group_counter = 0;
+            // for each education create a container for classification buttons
+            for(let edu in education_classification_dict){
+              if (education_classification_dict.hasOwnProperty(edu)) {
+                console.log("2 found education " + edu);
+                // Create a ontainer for the classification buttons runder the education parameter
+                const buttonContainer = document.createElement('div');
+                buttonContainer.className = 'classification-button-wrapper';
+
+                const button_header = document.createElement('div');
+                button_header.className = 'button-header';
+                button_header.innerText = edu;
+                button_header.align = 'center';
+
+                buttonContainer.append(button_header);
+
+                console.log(education_classification_dict[edu]);
+                // for each classification listed under the education, create a button and add it to the wrapper
+                for(let class_under_edu in education_classification_dict[edu]){
+                  console.log("class_under_edu:" + class_under_edu);
+                  let classification_string = education_classification_dict[edu][class_under_edu];
+
+                  // Create a button
+                  const button = document.createElement('button');
+                  button.className = 'explore_classification_button';
+                  button.innerText = classification_string.split(' - ')[0];
+                  button.title = classification_string.split(' - ')[1].replace(/_/g, " ");
+                 // button.textContent = class_under_edu.split(' - ')[0];
+                  let link = "classificationPages/" + classification_string.split(' - ')[1] + ".html";
+                  console.log("creating button with link: " + link);
+
+                  button.onclick = function() {
+                    
+                    window.location.href = link
+                    
+                  };
+
+                  // Add the button to its container
+                  buttonContainer.appendChild(button);
+                }
+
+                // add the button container to the necessary column
+                column_containters[column_counter].appendChild(buttonContainer);
+                if(column_counter == 2){
+                  column_counter = 0;
+                }else{
+                  column_counter = column_counter + 1;
+                }
+              }
+            } 
           });
         }
     
         // Call the filterButtons function
-        filterButtons();
+        create_all_buttons();
     });
     </script>
 </body>
@@ -200,15 +226,44 @@
     color: white;
   }
 
-.flex-container {
-    display: flex;
-}
+  .flex-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      
+  }
 
-.classification-column {
-    flex: 1; /* Each item will take an equal amount of space */
-    padding: 10px; /* Optional spacing */
-    text-align: center; /* Optional text alignment */
-}
+  .explore_classification_button{
+    width: 150px; /* Make button width fill the container */
+    padding: 5px 10px;
+    margin: 10px;
+    border: 2px solid #000000 !important;
+  }
+
+  .classification-column {
+    /*flex: 1;             Each item will take an equal amount of space */
+    /*padding: 10px;       Optional spacing */
+    /*text-align: center;  Optional text alignment */
+      display: flex;
+      flex-direction: column;
+      align-items: start; /* Align buttons to the start of the container */
+      gap: 10px; /* Adjust the space between buttons */
+  }
+
+  .classification-button-wrapper{
+    border: 2px solid #000000 !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .button-header{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333333; /* or any color that suits your design */
+    margin: 10px;
+
+  }
 
   select {
     width: 100%;
