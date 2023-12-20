@@ -25,30 +25,241 @@
         <div class="w-layout-hflex flex-block"></div>
   </div>
   <div id="ihzgkv" class="selection-container">
-        <div class="header">Search by field of study</div>
-        <div class="description">Step 1: Select an education program. You can select multiple programs to
-              better
-              represent the subject you are studying</div>
+        <div class="header">Search by classification</div>
+        <div class="description">
+            Use the filters below to view the jobs that exist within ISED. This does not represent job openings, just what jobs exist.<br><br>
+            Step 1: Select one or more classifications <br>
+            Step 2: Select options to filter by language, province, city, and branch
+        </div>
   </div>
   <div id="education-program-2" class="multiselect">
-        <div id="igcqik-2" class="column"><button type="button">Aboriginal / Indigenous Studies</button></div>
-        <div id="i7kkyo-2" class="column">
-              <button type="button" id="i82vkr-2">Film and Television Production</button></div>
-        <div id="iz7652-2" class="column"><button type="button">Oenology &amp; Viticulture</button></div>
+      <div id="igcqik-2" class="column">
+            <button type="button">AS - Administrative Services</button>
+            <button type="button">EC - Economics and Social Science Services</button>
+            <button type="button">EX - Executive</button>
+            <button type="button">CO - Commerce</button>
+            <button type="button">CR - Clerical and Regulatory</button>
+            <button type="button">ED - Language Teaching</button>
+            <button type="button">FI - Financial Management</button>
+            <button type="button">GSSTS - General Services - Stores Services</button>
+            <button type="button">IS - Information Services</button>
+            <button type="button">IT - Information Technology</button>
+            <button type="button">LS - Library Science</button>
+            <button type="button">PM - Programme Administration</button>
+      </div>
+      <div id="i7kkyo-2" class="column">
+            <button type="button">SGPAT - Scientific Regulation - Patent Examination</button>
+            <button type="button">GT - General Technical</button>
+            <button type="button">PG - Purchasing and Supply</button>
+            <button type="button">LC - Law Management</button>
+            <button type="button">LP - Law Practitioner</button>
+            <button type="button">EG - Engineering and Scientific Support</button>
+            <button type="button">EL - Electronics</button>
+            <button type="button">PE - Personnel Administration</button>
+            <button type="button">GSMPS - General Services - Miscellaneous Personal Services</button>
+            <button type="button">ENENG - Engineering</button>
+            <button type="button">AU - Auditing</button>
+            <button type="button">GLMDO - General Labour and Trades - Machine Driving-Operating</button>
+      </div>
+      <div id="iz7652-2" class="column">
+            <button type="button">PC - Physical Sciences </button>
+            <button type="button">TI - Technical Inspection</button>
+            <button type="button">GLCOI - General Labour and Trades - Construction Inspecting</button>
+            <button type="button">GLEIM - General Labour and Trades - Electrical Installing and Maintaining</button>
+            <button type="button">GLMAM - General Labour and Trades - Machinery Maintaining</button>
+            <button type="button">GLMAN - General Labour and Trades - Manipulating</button>
+            <button type="button">GLPIP - General Labour and Trades - Pipefitting</button>
+            <button type="button">GLWOW - General Labour and Trades - Woodworking</button>
+            <button type="button">HP - Heating, Power and Stationary Plant Operations</button>
+            <button type="button">SEREM - Scientific Research - Research manager</button>
+            <button type="button">SEREM - Scientific Research - Research scientist</button>
+
+      </div>
   </div>
   <div id="iwbsq8c" class="div-block-2"><label for="education-program" id="iw9bja">Optional Filters</label>
         <div id="iqwljl" class="filter-container">
               <div id="ifurw6" class="filter">
-                    <label for="language">Language</label><select type="text" id="language" multiple options="[object Object],[object Object],[object Object],[object Object],[object Object]"><option value="bilingual">Bilingual</option><option value="engfr">Eng or Fr</option><option value="english">English</option><option value="french">French</option><option value="">(blank)</option></select>
+                    <label for="language">Language</label><select type="text" id="language" multiple options="[object Object],[object Object],[object Object],[object Object],[object Object]">
+                        <option value="bilingual">Bilingual</option>
+                        <option value="engfr">English or French</option>
+                        <option value="english">English</option>
+                        <option value="french">French</option>
+                        <option value="">(blank)</option>
+                  </select>
               </div>
               <div class="filter">
-                    <label for="province">Province</label><select type="text" id="province" multiple options="[object Object],[object Object],[object Object]"><option value="ab">AB</option><option value="bc">BC</option><!-- Add other provinces as needed --></select>
+                  <label for="province">Province</label>
+                  <select type="text" id="province" multiple options="[object Object],[object Object],[object Object]">
+                        <option value="ab">NCR</option>
+                        <option value="ab">AB</option>
+                        <option value="bc">BC</option>
+                        <option value="ab">MB</option>
+                        <option value="bc">NB</option>
+                        <option value="ab">NL</option>
+                        <option value="bc">NT</option>
+                        <option value="ab">NS</option>
+                        <option value="bc">NU</option>
+                        <option value="ab">ON</option>
+                        <option value="bc">PEI</option>
+                        <option value="ab">QC</option>
+                        <option value="bc">SK</option>
+                        <option value="bc">YT</option>
+                  </select>
               </div>
               <div class="filter">
-                    <label for="city">City</label><select type="text" id="city" multiple options="[object Object],[object Object],[object Object]"><option value="00066">00066</option><option value="aurora">Aurora</option></select>
+                  <label for="city">City</label>
+                  <select type="text" id="city" multiple options="[object Object],[object Object],[object Object]">
+                        <option value="ottawa">Ottawa</option>
+                        <option value="sudbury">Sudbury</option>
+                        <option value="gatineau">Gatineau</option>
+                        <option value="toronto">Toronto</option>
+                        <option value="kitchener">Kitchener</option>
+                        <option value="edmonton">Edmonton</option>
+                        <option value="halifax">Halifax</option>
+                        <option value="montreal">Montreal</option>
+                        <option value="vancouver">Vancouver</option>
+                        <option value="waterloo">Waterloo</option>
+                        <option value="peterborough">Peterborough</option>
+                        <option value="winnipeg">Winnipeg</option>
+                        <option value="quebec">Quebec</option>
+                        <option value="saskatoon">Saskatoon</option>
+                        <option value="calgary">Calgary</option>
+                        <option value="moncton">Moncton</option>
+                        <option value="00066">00066</option>
+                        <option value="stjohns">St. John's</option>
+                        <option value="whitehorse">Whitehorse</option>
+                        <option value="kelowna">Kelowna</option>
+                        <option value="victoria">Victoria</option>
+                        <option value="charlottetown">Charlottetown</option>
+                        <option value="saultstemarie">Sault Ste. Marie</option>
+                        <option value="northbay">North Bay</option>
+                        <option value="thunderbay">Thunder Bay</option>
+                        <option value="timmins">Timmins</option>
+                        <option value="kenora">Kenora</option>
+                        <option value="hamilton">Hamilton</option>
+                        <option value="dartmouth">Dartmouth</option>
+                        <option value="belleville">Belleville</option>
+                        <option value="london">London</option>
+                        <option value="penticton">Penticton</option>
+                        <option value="regina">Regina</option>
+                        <option value="markham">Markham</option>
+                        <option value="sherbrooke">Sherbrooke</option>
+                        <option value="surrey">Surrey</option>
+                        <option value="princegeorge">Prince George</option>
+                        <option value="burlington">Burlington</option>
+                        <option value="saintjohn">Saint John</option>
+                        <option value="valdor">Val D'Or</option>
+                        <option value="mississauga">Mississauga</option>
+                        <option value="aurora">Aurora</option>
+                        <option value="yellowknife">Yellowknife</option>
+                        <option value="fredericton">Fredericton</option>
+                        <option value="nornerbrook">Nornerbrook</option>
+                  </select>
               </div>
               <div id="izai7z" class="filter">
-                    <label for="Branch" id="i6z6dv">Branch</label><select type="text" id="Branch" multiple options="[object Object],[object Object],[object Object]"><option value="AADM of STS">AADM of STS</option><option value="bc">AEB-Evaluation</option><!-- Add other provinces as needed --></select>
+                    <label for="Branch" id="i6z6dv">Branch</label>
+                    <select type="text" id="Branch" multiple options="[object Object],[object Object],[object Object]">
+                        <option value="Practice Management">Practice Management</option>
+                        <option value="Internal Audit">Internal Audit</option>
+                        <option value="Evaluation">Evaluation</option>
+                        <option value="Programs">Programs</option>
+                        <option value="TM Opposition Board">TM Opposition Board</option>
+                        <option value="Patent Branch">Patent Branch</option>
+                        <option value="Corp Strat & Services">Corp Strat & Services</option>
+                        <option value="Services to Business">Services to Business</option>
+                        <option value="Patent Appeal Board">Patent Appeal Board</option>
+                        <option value="Trademarks & Ind. Design">Trademarks & Ind. Design</option>
+                        <option value="INF Information Branch">INF Information Branch</option>
+                        <option value="Copyright & Ind Design">Copyright & Ind Design</option>
+                        <option value="Dir, SPMS">Dir, SPMS</option>
+                        <option value="Operations">Operations</option>
+                        <option value="Dig Media & Mark">Dig Media & Mark</option>
+                        <option value="Ministerial & Media Serv">Ministerial & Media Serv</option>
+                        <option value="Compliance & Operations">Compliance & Operations</option>
+                        <option value="Cartels & DMP">Cartels & DMP</option>
+                        <option value="Competition Promotion">Competition Promotion</option>
+                        <option value="DC, Dig Eng & Intel">DC, Dig Eng & Intel</option>
+                        <option value="Unspecified">Unspecified</option>
+                        <option value="Mergers & Mono Practices">Mergers & Mono Practices</option>
+                        <option value="Chief of Staff to the Comm">Chief of Staff to the Comm</option>
+                        <option value="Resour Plan & Invest DCFO">Resour Plan & Invest DCFO</option>
+                        <option value="Corp Fin, Sys & Pro">Corp Fin, Sys & Pro</option>
+                        <option value="StrategicManag&Planning">StrategicManag&Planning</option>
+                        <option value="Human Resources">Human Resources</option>
+                        <option value="Fac, Sec & Emerg Mgmt">Fac, Sec & Emerg Mgmt</option>
+                        <option value="Senior Advisor to DM">Senior Advisor to DM</option>
+                        <option value="Chief of Staff to CSA">Chief of Staff to CSA</option>
+                        <option value="Ombud, Wellness & Inclusion">Ombud, Wellness & Inclusion</option>
+                        <option value="Associate DM’s Office">Associate DM’s Office</option>
+                        <option value="Assoc. DM’s Office">Assoc. DM’s Office</option>
+                        <option value="Chief of Staff">Chief of Staff</option>
+                        <option value="AADM, SIPS, RED - SD">AADM, SIPS, RED - SD</option>
+                        <option value="AADM of STS">AADM of STS</option>
+                        <option value="SADM, SIF - SD">SADM, SIF - SD</option>
+                        <option value="Chief Information Office">Chief Information Office</option>
+                        <option value="Digital Svces to Business">Digital Svces to Business</option>
+                        <option value="Strat Plan & Corp Serv">Strat Plan & Corp Serv</option>
+                        <option value="Data & Digital Program">Data & Digital Program</option>
+                        <option value="Dir., IT assets & Prof. Serv">Dir., IT assets & Prof. Serv</option>
+                        <option value="Bus Development">Bus Development</option>
+                        <option value="Regional Ecosystems">Regional Ecosystems</option>
+                        <option value="Program Operations">Program Operations</option>
+                        <option value="Small Business Services">Small Business Services</option>
+                        <option value="Ontario Federal Council">Ontario Federal Council</option>
+                        <option value="Tourism and Community Recovery">Tourism and Community Recovery</option>
+                        <option value="Industrial Technicl Ben">Industrial Technicl Ben</option>
+                        <option value="Strategic Policy">Strategic Policy</option>
+                        <option value="DG, Adv Man & Ind Strat">DG, Adv Man & Ind Strat</option>
+                        <option value="Auto_Transp_Dig Tech Ind">Auto_Transp_Dig Tech Ind</option>
+                        <option value="Aerospace Def & Marine">Aerospace Def & Marine</option>
+                        <option value="Corporate Services">Corporate Services</option>
+                        <option value="Industrl & Tech Benefits">Industrl & Tech Benefits</option>
+                        <option value="Clean Tech & Clean Growth">Clean Tech & Clean Growth</option>
+                        <option value="Strat Plann & Manag Serv">Strat Plann & Manag Serv</option>
+                        <option value="Strategic Innovation Fund">Strategic Innovation Fund</option>
+                        <option value="Program Dvp & Strat">Program Dvp & Strat</option>
+                        <option value="Innovator’s Experience">Innovator’s Experience</option>
+                        <option value="Performance & Partnership">Performance & Partnership</option>
+                        <option value="SIF DG, Special Project">SIF DG, Special Project</option>
+                        <option value="Innovation Superclusters">Innovation Superclusters</option>
+                        <option value="DG, CDAP">DG, CDAP</option>
+                        <option value="DG ISC">DG ISC</option>
+                        <option value="Clean Growth Hub">Clean Growth Hub</option>
+                        <option value="DG,SP (FA&O)">DG,SP (FA&O)</option>
+                        <option value="Dir Gen-SD">Dir Gen-SD</option>
+                        <option value="Science Policy">Science Policy</option>
+                        <option value="Program Coordination">Program Coordination</option>
+                        <option value="Strategic Plan & Mgmt Serv">Strategic Plan & Mgmt Serv</option>
+                        <option value="Science Tech & Inn Cou Sec">Science Tech & Inn Cou Sec</option>
+                        <option value="DG Small Business">DG Small Business</option>
+                        <option value="President MC">President MC</option>
+                        <option value="Bankruptcy">Bankruptcy</option>
+                        <option value="Corporations">Corporations</option>
+                        <option value="DG, Tourism">DG, Tourism</option>
+                        <option value="Strategic Plan & Mgt Ser">Strategic Plan & Mgt Ser</option>
+                        <option value="Office Consumer Affairs">Office Consumer Affairs</option>
+                        <option value="Govern Pol Coord & Plan">Govern Pol Coord & Plan</option>
+                        <option value="Spectrum Mgmt Ops">Spectrum Mgmt Ops</option>
+                        <option value="Engi Plan & Stand">Engi Plan & Stand</option>
+                        <option value="Spectrum Pol">Spectrum Pol</option>
+                        <option value="Connected Canada">Connected Canada</option>
+                        <option value="Comm Research Centre">Comm Research Centre</option>
+                        <option value="Digit Policy">Digit Policy</option>
+                        <option value="Dig Can-Broadb Connect">Dig Can-Broadb Connect</option>
+                        <option value="DG, Dig Inc-SD">DG, Dig Inc-SD</option>
+                        <option value="External & Trade Pol">External & Trade Pol</option>
+                        <option value="DG, Invest Review">DG, Invest Review</option>
+                        <option value="Ontario Region">Ontario Region</option>
+                        <option value="Marketplace Framewrk Poli">Marketplace Framewrk Poli</option>
+                        <option value="Strat Resea & Resu">Strat Resea & Resu</option>
+                        <option value="Atlantic Region">Atlantic Region</option>
+                        <option value="Pacific Region">Pacific Region</option>
+                        <option value="Prairies & Northern Regio">Prairies & Northern Regio</option>
+                        <option value="Telecom & Internet Pol">Telecom & Internet Pol</option>
+                        <option value="Quebec Region">Quebec Region</option>
+                        <option value="Strat Plann & Corp Serv">Strat Plann & Corp Serv</option>
+                        <option value="Port & Intgov Eng Sec">Port & Intgov Eng Sec</option>
+                  </select>
               </div>
         </div>
   </div>
@@ -73,25 +284,43 @@
   }
 
   .multiselect button {
-        margin: 5px;
-        padding: 5px 10px;
-        border: none;
-        background-color: #f7f7f7;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      border: none;
+      background-color: #eceaea;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      width: 200px;
+      border-radius: 8px;
   }
 
   .multiselect button.selected {
-        background-color: #007BFF;
-        color: white;
+      background-color: #007BFF;
+      color: white;
   }
+
+  .multiselect {
+      display: flex;
+      border: 2px solid #000000 !important;
+      margin: 10px;
+      gap: 50px;
+      max-height: 357px;
+      overflow-y: auto;  /* Single scrollbar for the container */
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: 114px;
+      margin-right: 128px;
+      justify-content: center;
+      }
 
   select {
         width: 100%;
         padding: 5px;
         margin-bottom: 10px;
         border: 1px solid #ccc;
+        height: 200px;
   }
 
   .div-block-2 {
@@ -127,19 +356,13 @@
   }
 
   .filter {
-        min-width: 158px;
+      min-width: 158px;
   }
 
   #language {
         text-align: left;
   }
 
-  .multiselect {
-        display: flex;
-        gap: 118px;
-        margin-left: 114px;
-        margin-right: 128px;
-  }
 
   .selection-container {
         margin-left: 85px;
