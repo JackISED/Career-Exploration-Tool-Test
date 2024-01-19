@@ -1,0 +1,47 @@
+[
+    {
+        "ID": 1,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Campus Operations",
+        "Position Title": "Electrician",
+        "Classification": "GLEIM - General Labour and Trades \u2013 Electrical Installing and Maintaining",
+        "Level": 10.0,
+        "NOC": 72200.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    },
+    {
+        "ID": 2,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Campus Operations",
+        "Position Title": "Electrician",
+        "Classification": "GLEIM - General Labour and Trades \u2013 Electrical Installing and Maintaining",
+        "Level": 10.0,
+        "NOC": 72200.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    },
+    {
+        "ID": 3,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Campus Operations",
+        "Position Title": "Supervisor, Electrical Shop",
+        "Classification": "GLEIM - General Labour and Trades \u2013 Electrical Installing and Maintaining",
+        "Level": 12.0,
+        "NOC": 72011.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    }
+]

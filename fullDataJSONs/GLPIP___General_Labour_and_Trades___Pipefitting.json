@@ -1,0 +1,47 @@
+[
+    {
+        "ID": 1,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Campus Operations",
+        "Position Title": "Plumber",
+        "Classification": "GLPIP - General Labour and Trades \u2013 Pipefitting",
+        "Level": 9.0,
+        "NOC": 72300.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    },
+    {
+        "ID": 2,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Campus Operations",
+        "Position Title": "Air Cond./Heating Mech. & Fitt",
+        "Classification": "GLPIP - General Labour and Trades \u2013 Pipefitting",
+        "Level": 9.0,
+        "NOC": 72302.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    },
+    {
+        "ID": 3,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Campus Operations",
+        "Position Title": "Supervisor, Mechanical Shop",
+        "Classification": "GLPIP - General Labour and Trades \u2013 Pipefitting",
+        "Level": 12.0,
+        "NOC": 72012.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "Bilingual",
+        "Linguistic Profile": "CBC/CBC"
+    }
+]

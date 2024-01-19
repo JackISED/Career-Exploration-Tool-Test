@@ -1,10 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Efficient GLaDOS Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/wet-boew@4.0.43/dist/css/wet-boew.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>ISEDCareerExplorationTool</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+      <style>      
+            * {
+                  box-sizing: border-box;
+            }
+      
+            body {
+                  margin: 0;
+                  font-family: Arial, sans-serif;
+                  padding: 20px;
+            }
+      
+            .filterLabel{
+                  font-weight: bold;
+            }
+
+            .multiselect button {
+                  margin-top: 10px;
+                  margin-bottom: 10px;
+                  padding: 5px 10px;
+                  border: none;
+                  background-color: #eceaea;
+                  cursor: pointer;
+                  transition: background-color 0.3s ease;
+                  display: block;
+                  width: 200px;
+                  border-radius: 8px;
+            }
+      
+            .multiselect button.selected {
+                  background-color: #007BFF;
+                  color: white;
+            }
+      
+            .multiselect {
+                  display: flex;
+                  border: 2px solid #000000 !important;
+                  margin: 10px;
+                  gap: 50px;
+                  max-height: 357px;
+                  overflow-y: auto;  /* Single scrollbar for the container */
+                  padding-left: 15px;
+                  padding-right: 15px;
+                  margin-left: 114px;
+                  margin-right: 128px;
+                  justify-content: center;
+            }
+            
+      
+            select {
+                  width: 100%;
+                  padding: 5px;
+                  margin-bottom: 10px;
+                  border: 3px solid #1b1b1b;
+                  height: 200px;
+                  border-radius: 5px;
+            }
+      
+            .div-block-2 {
+                  min-width: 760px;
+                  margin-top: 0px;
+                  margin-right: 450px;
+                  margin-bottom: 0px;
+                  margin-left: 164px;
+                  display: flex;
+                  flex-direction: column;
+            }
+      
+            .resultsDiv{
+                  min-width: 760px;
+                  margin-top: 0px;
+                  margin-right: 450px;
+                  margin-bottom: 0px;
+                  margin-left: 164px;
+                  display: flex;
+                  flex-direction: column;
+                  padding-top: 80px;
+                  padding-bottom: 80px;
+            }
+      
+            .header {
+                  font-size: 18px;
+                  font-weight: bold;
+                  margin-bottom: 10px;
+            }
+      
+            .description {
+                  margin-bottom: 20px;
+            }
+      
+            .w-layout-blockcontainer.w-container {
+                  margin-top: 0px;
+                  margin-right: 113.714px;
+                  margin-bottom: 41px;
+                  margin-left: 74px;
+            }
+      
+            .filter-container {
+                  display: flex;
+                  gap: 41px;      
+            }
+      
+      
+      
+            .filter {
+                  min-width: 158px;
+            
+            }
+      
+            #language {
+                  text-align: left;
+            }
+      
+      
+            .selection-container {
+                  margin-left: 85px;
+            }
+      
+            .paragraph {
+                  margin-top: 0px;
+                  margin-right: 0px;
+                  margin-bottom: 10px;
+                  margin-left: 0px;
+            }
+      
+            .heading-2 {
+                  margin-left: 49px;
+            }
+            
+            button, input, optgroup, textarea {
+                  color: inherit;
+                  font: inherit;
+            }
+
+            select {
+                  color: inherit;
+                  font: inherit;
+            }
+            
+            input {
+                  line-height: normal;
+                  margin-left: 114px;
+                  border-collapse: collapse; /* Removes the space between borders */
+
+            }
+
+            .table-container {
+                  margin: 20px;
+                  font-size: 14px;
+              }
+              table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  margin-bottom: 20px;
+              }
+              th, td {
+                  padding: 8px;
+                  text-align: left;
+                  border: 1px solid #ddd;
+              }
+              th {
+                  background-color: #f2f2f2;
+              }
+              tr:nth-child(even) {
+                  background-color: #f9f9f9;
+              }
+              .pagination {
+                  text-align: center;
+              }
+              .pagination button {
+                  margin: 0 5px;
+                  padding: 5px 10px;
+                  border: 1px solid #ddd;
+                  background-color: #f9f9f9;
+              }
+              .pagination .active {
+                  background-color: #007bff;
+                  color: white;
+                  border-color: #007bff;
+              }
+
+
+            
+      </style>
+
+</head>
 <body id="i1izbgo">
-  <meta charset="utf-8" />
-  <title>ISEDCareerExplorationTool</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <meta content="Webflow" name="generator" />
-  <link href="https://cdn.prod.website-files.com/65495a261135ac39b4bfa87b/css/isedcareerexplorationtool.webflow.12457f43d.css"
-        rel="stylesheet" type="text/css" />
+ 
+  <!-- <link href="https://cdn.prod.website-files.com/65495a261135ac39b4bfa87b/css/isedcareerexplorationtool.webflow.12457f43d.css" rel="stylesheet" type="text/css" /> -->
   <link href="https://cdn.prod.website-files.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   <link href="https://cdn.prod.website-files.com/img/webclip.png" rel="apple-touch-icon" />
   <div class="top-of-page">
@@ -29,9 +219,10 @@
         <div class="description">
             Use the filters below to view the jobs that exist within ISED. This does not represent job openings, just what jobs exist.<br><br>
             Step 1: Select one or more classifications <br>
-            Step 2: Select options to filter by language, province, city, and branch
+            Step 2: Select options to filter by language, province, city, and branch. Hold down control to select more than one option in an optional filter. 
         </div>
   </div>
+  <input type="text" id="searchBox" placeholder="Search for classifications"/>
   <div id="education-program-2" class="multiselect">
       <div id="igcqik-2" class="column">
             <button type="button">AS - Administrative Services</button>
@@ -76,7 +267,7 @@
 
       </div>
   </div>
-  <div id="iwbsq8c" class="div-block-2"><label for="education-program" id="iw9bja">Optional Filters</label>
+  <div id="iwbsq8c" class="div-block-2"><label for="education-program" class="filterLabel" id="iw9bja">Optional Filters</label>
         <div id="iqwljl" class="filter-container">
               <div id="ifurw6" class="filter">
                     <label for="language">Language</label><select type="text" id="language" multiple options="[object Object],[object Object],[object Object],[object Object],[object Object]">
@@ -262,120 +453,62 @@
                   </select>
               </div>
         </div>
+        <button type="button">clear all filters</button>
   </div>
+
+  
+  <div class="resultsDiv">
+      <div class="table-container">
+            <div>
+                <label for="filter">Filter items</label>
+                <input type="text" id="filter" placeholder="Search...">
+            </div>
+            <table id="wet-table">
+                <thead>
+                    <tr>
+                        <th>Classification</th>
+                        <th>Level</th>
+                        <th>Job Title</th>
+                        <th>NOC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+            <div class="pagination" id="pagination">
+                <!-- Pagination buttons will be inserted here by JavaScript -->
+            </div>
+      </div>
+
+  </div>
+
+  <script>
+      document.querySelectorAll('.multiselect button').forEach(button => {
+            button.addEventListener('click', function() {
+                  this.classList.toggle('selected');
+            });
+      });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+      $(document).ready(function(){
+      $('select[multiple]').mousedown(function(e){
+            e.preventDefault();
+
+            var select = this;
+            var scroll = select.scrollTop;
+
+            e.target.selected = !e.target.selected;
+
+            setTimeout(function(){select.scrollTop = scroll;}, 0);
+
+            $(select).focus();
+      }).mousemove(function(e){e.preventDefault()});
+      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/wet-boew@4.0.43/dist/js/wet-boew.min.js"></script>
+
 </body>
-<style>
-  * {
-        box-sizing: border-box;
-  }
-
-  body {
-        margin: 0;
-  }
-
-  * {
-        box-sizing: border-box;
-  }
-
-  body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        padding: 20px;
-  }
-
-  .multiselect button {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      padding: 5px 10px;
-      border: none;
-      background-color: #eceaea;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      display: block;
-      width: 200px;
-      border-radius: 8px;
-  }
-
-  .multiselect button.selected {
-      background-color: #007BFF;
-      color: white;
-  }
-
-  .multiselect {
-      display: flex;
-      border: 2px solid #000000 !important;
-      margin: 10px;
-      gap: 50px;
-      max-height: 357px;
-      overflow-y: auto;  /* Single scrollbar for the container */
-      padding-left: 15px;
-      padding-right: 15px;
-      margin-left: 114px;
-      margin-right: 128px;
-      justify-content: center;
-      }
-
-  select {
-        width: 100%;
-        padding: 5px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        height: 200px;
-  }
-
-  .div-block-2 {
-        min-width: 760px;
-        margin-top: 0px;
-        margin-right: 450px;
-        margin-bottom: 0px;
-        margin-left: 164px;
-        display: flex;
-        flex-direction: column;
-  }
-
-  .header {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-  }
-
-  .description {
-        margin-bottom: 20px;
-  }
-
-  .w-layout-blockcontainer.w-container {
-        margin-top: 0px;
-        margin-right: 113.714px;
-        margin-bottom: 41px;
-        margin-left: 74px;
-  }
-
-  .filter-container {
-        display: flex;
-        gap: 41px;
-  }
-
-  .filter {
-      min-width: 158px;
-  }
-
-  #language {
-        text-align: left;
-  }
-
-
-  .selection-container {
-        margin-left: 85px;
-  }
-
-  .paragraph {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 10px;
-        margin-left: 0px;
-  }
-
-  .heading-2 {
-        margin-left: 49px;
-  }
-</style>
+</html>

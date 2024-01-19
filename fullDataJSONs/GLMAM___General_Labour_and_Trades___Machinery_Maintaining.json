@@ -1,0 +1,62 @@
+[
+    {
+        "ID": 1,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Campus Operations",
+        "Position Title": "Building Systems Technician",
+        "Classification": "GLMAM - General Labour and Trades \u2013 Machinery Maintaining",
+        "Level": 8.0,
+        "NOC": 72402.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    },
+    {
+        "ID": 2,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "None",
+        "Dept ID Description": "CR- Communi. Research Center",
+        "Position Title": "Building Systems Technician",
+        "Classification": "GLMAM - General Labour and Trades \u2013 Machinery Maintaining",
+        "Level": 8.0,
+        "NOC": 72402.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    },
+    {
+        "ID": 3,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "None",
+        "Dept ID Description": "CR- Communi. Research Center",
+        "Position Title": "Building Systems Technician",
+        "Classification": "GLMAM - General Labour and Trades \u2013 Machinery Maintaining",
+        "Level": 8.0,
+        "NOC": 72402.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    },
+    {
+        "ID": 4,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Campus Operations",
+        "Position Title": "Air Conditioning Mechanic",
+        "Classification": "GLMAM - General Labour and Trades \u2013 Machinery Maintaining",
+        "Level": 10.0,
+        "NOC": 72402.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    }
+]

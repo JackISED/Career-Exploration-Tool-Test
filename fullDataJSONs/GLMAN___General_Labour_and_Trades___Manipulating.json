@@ -1,0 +1,32 @@
+[
+    {
+        "ID": 1,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Campus Operations",
+        "Position Title": "Mover-Manipulator",
+        "Classification": "GLMAN - General Labour and Trades \u2013 Manipulating",
+        "Level": 6.0,
+        "NOC": 75101.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    },
+    {
+        "ID": 2,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Campus Operations",
+        "Position Title": "Mover-Manipulator",
+        "Classification": "GLMAN - General Labour and Trades \u2013 Manipulating",
+        "Level": 6.0,
+        "NOC": 75101.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "English",
+        "Linguistic Profile": "---/---"
+    }
+]

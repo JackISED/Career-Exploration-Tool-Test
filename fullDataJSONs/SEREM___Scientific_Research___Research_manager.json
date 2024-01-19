@@ -1,0 +1,32 @@
+[
+    {
+        "ID": 1,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Wireless Technologies",
+        "Position Title": "Research Director",
+        "Classification": "SEREM - Scientific Research - Research manager",
+        "Level": 2.0,
+        "NOC": 20011.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "Bilingual",
+        "Linguistic Profile": "CBC/CBC"
+    },
+    {
+        "ID": 2,
+        "Sector": "Spectrum and Telecomm",
+        "Branch": "Comm Research Centre",
+        "Dept ID Description": "STS-Applications & performance",
+        "Position Title": "Research Director",
+        "Classification": "SEREM - Scientific Research - Research manager",
+        "Level": 2.0,
+        "NOC": 20011.0,
+        "Province": "NCR",
+        "City": "Ottawa",
+        "Location": "Ottawa - CRC",
+        "Language requirement": "Bilingual",
+        "Linguistic Profile": "CBB/CBB"
+    }
+]
